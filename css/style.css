@@ -244,6 +244,7 @@ main .container{
 .block__main{
 	background: url(../img/main-background0.png);
 	height: 625px;
+	transition: all 0.2s cubic-bezier(0.89, 0.25, 0, 1.1) 0.2s;
 	display: flex;
 	background-size: cover;
 	justify-content: space-between;
@@ -392,6 +393,7 @@ section .container{
 
 }
 .section__block--items{
+	transition: 0.2s;
     max-width: 387px;
 	height: 488px;
 	box-shadow: 0px 2px 50px -27px rgba(92, 104, 148, 0.62);
@@ -447,9 +449,11 @@ section .container{
 }
 .section__block--items:hover{
     box-shadow: 0 0 10px 4px #DEBB2A;
+	transition: 0.2s;
 }
 .section__person--content:hover{
 	box-shadow: 0 0 10px 4px #DEBB2A;
+	transition: 0.2s;
 }
 .section__block-img{
 	position: relative;
@@ -1664,6 +1668,9 @@ span.section__projects--title{
 	.header-bottom__menu li:not(:last-child){
 		margin-right: 0;
 	}
+	.section__calendar--content{
+		flex-wrap: wrap;
+	}
 }
 @media (max-width: 1400px) {
 	.menu__link{
@@ -1797,6 +1804,19 @@ span.section__projects--title{
 	}
 }
 @media (max-width:500px) {
+	.section__calendar--content{
+		margin-top: 25px;
+	}
+	.cal1 .clndr .clndr-table{
+		margin-top: 0 !important;
+	}
+	.clndr table tbody tr{
+		margin-top: 0 !important; 
+	}
+	.clndr table tbody{
+		margin-top: 20px;
+		display: block;
+	}
 	.footer__block--logo{
 		width: 100px;
 	}
@@ -1872,6 +1892,7 @@ span.section__projects--title{
 	}
 	.section__about,.section__calendar{
 		padding-top: 20px;
+		overflow: hidden;
 	}
 	.section__calendar{
 		padding: 0;
