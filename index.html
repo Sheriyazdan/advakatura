@@ -14,8 +14,10 @@
 		<!-- animate-css -->
 		<link rel="stylesheet" href="css/animate.min.css"/>
 		<link rel="stylesheet" href="css/swiper.css">
+		<link rel="stylesheet" href="css/clndr.css">
 		<!-- WoW-js -->
 		<script src="js/wow.min.js"></script>
+
 		<script>
 			new WOW().init();
 		</script>
@@ -56,6 +58,11 @@
 									<a class="lang " href="/kz">Каз</a>
 								</div>
 							</div>
+						</div>
+						<div class="burger__menu" onclick="openMenu(this)">
+							<div class="burger__menu--items top"></div>
+							<div class="burger__menu--items middle"></div>
+							<div class="burger__menu--items bottom"></div>
 						</div>
 					</div>
 				</div>
@@ -120,11 +127,383 @@
 							</a>
 						</div>
 						<div class="section__block--news block-tabs">
-							<span>Новости</span>
-							<span>Обсуждаемые проекты</span>
-							<span class="active">Практика</span>
+							<span class="active"onclick="tabSelectScroll(1)">Новости</span>
+							<span onclick="tabSelectScroll(2)">Обсуждаемые проекты</span>
+							<span onclick="tabSelectScroll(3)">Практика</span>
 						</div>
 						<div class="section__block--content">
+								<div class="section__block--items">
+									<a href="">
+										<div class="section__block-img">
+										<img src="img/block-hammer.png" alt="block-hammer">
+										<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+										</div>
+										<div class="section__block--title">
+											<span class="block-date">20.04.2022</span>
+											<p class="block-main_text">реализация намеченных плановых заданий</p>
+											<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+										</div>
+									</a>
+								</div>
+								<div class="section__block--items">
+									<a href="">
+										<div class="section__block-img">
+										<img src="img/block-hammer.png" alt="block-hammer">
+										<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+										</div>
+										<div class="section__block--title">
+											<span class="block-date">20.04.2022</span>
+											<p class="block-main_text">ddsadsadsadsa намеченных плановых заданий</p>
+											<span class="text-content">dsadsadsadsa рекомендуют при дознавателям, следователям, судьям...</span>
+										</div>
+									</a>
+								</div>
+								<div class="section__block--items">
+									<a href="">
+										<div class="section__block-img">
+										<img src="img/block-hammer.png" alt="block-hammer">
+										<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+										</div>
+										<div class="section__block--title">
+											<span class="block-date">20.04.2022</span>
+											<p class="block-main_text">реализаdasdasdasция намеченных плановых заданий</p>
+											<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+										</div>
+									</a>
+								</div>
+								<div class="section__block--items">
+									<a href="">
+										<div class="section__block-img">
+										<img src="img/block-hammer.png" alt="block-hammer">
+										<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+										</div>
+										<div class="section__block--title">
+											<span class="block-date">20.04.2022</span>
+											<p class="block-main_text">реализацdsadasия намеченных плановых заданий</p>
+											<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+										</div>
+									</a>
+								</div>
+								<div class="section__block--items">
+									<a href="">
+										<div class="section__block-img">
+										<img src="img/block-hammer.png" alt="block-hammer">
+										<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+										</div>
+										<div class="section__block--title">
+											<span class="block-date">20.04.2022</span>
+											<p class="block-main_text">реализация dsadнамеченных плановых заданий</p>
+											<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+										</div>
+									</a>
+								</div>
+								<div class="section__block--items">
+									<a href="">
+										<div class="section__block-img">
+										<img src="img/block-hammer.png" alt="block-hammer">
+										<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+										</div>
+										<div class="section__block--title">
+											<span class="block-date">20.04.2022</span>
+											<p class="block-main_text">реализация намеченных плановых заданий</p>
+											<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+										</div>
+									</a>
+								</div>
+								<div class="section__block--items">
+									<a href="">
+										<div class="section__block-img">
+										<img src="img/block-hammer.png" alt="block-hammer">
+										<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+										</div>
+										<div class="section__block--title">
+											<span class="block-date">20.04.2022</span>
+											<p class="block-main_text">реализация намеченных плановых заданий</p>
+											<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+										</div>
+									</a>
+								</div>
+						</div>
+					</div>
+					<div class="section__conference--content--items scroll">
+						<div data-scroll="1">
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановых заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">ddsadsadsadsa намеченных плановых заданий</p>
+										<span class="text-content">dsadsadsadsa рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализаdasdasdasция намеченных плановых заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализацdsadasия намеченных плановых заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация dsadнамеченных плановых заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановых заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановых заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div data-scroll="2">
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановых заданий</p>
+										<span class="text-content">Адвокатам рекоменddddddddddddдуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановых заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дaaaaaaaaaознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановыхdasdas заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановыхdasdas заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановыхdasdas заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановыхdasdas заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановыхdasdas заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановыхdasdas заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановыхdasdas заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановыхdasdas заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановых заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановых заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановых заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+							<div class="section__block--items">
+								<a href="">
+									<div class="section__block-img">
+									<img src="img/block-hammer.png" alt="block-hammer">
+									<img class="news-arrow" src="img/news-arrow.svg" alt="header-arrow">
+									</div>
+									<div class="section__block--title">
+										<span class="block-date">20.04.2022</span>
+										<p class="block-main_text">реализация намеченных плановых заданий</p>
+										<span class="text-content">Адвокатам рекомендуют при дознавателям, следователям, судьям...</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div data-scroll="3">
 							<div class="section__block--items">
 								<a href="">
 									<div class="section__block-img">
@@ -224,21 +603,73 @@
 				<div class="container">
 					<div class="section__about">
 						<div class="section__about--tabs block-tabs">
-							<span class="active">О нас</span>
-							<span>История</span>
-							<span>Основные функции</span>
-							<span>Органы рка</span>
+							<span class="active" onclick="tabSelectMain(1)">О нас</span>
+							<span onclick="tabSelectMain(2)">История</span>
+							<span onclick="tabSelectMain(3)">Основные функции</span>
+							<span onclick="tabSelectMain(4)">Органы рка</span>
 						</div>
-						<span class="section__about--text top">
-							Не следует, однако забывать, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт рамки
-						</span>
-						<span class="section__about--text">
-							Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Товарищи! новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации
-						</span>
-						<span class="section__about--text">
-							Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Товарищи! новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации
-						</span>
-						<button class="section__about--btn"><a href="">Подробнее</a></button>
+						<div class="main__tabs--content">
+							<span class="section__about--text top">
+								Не следует, однако забывать, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт рамки
+							</span>
+							<span class="section__about--text">
+								Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Товарищи! новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации
+							</span>
+							<span class="section__about--text">
+								Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Товарищи! новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации
+							</span>
+							<a href=""><button class="section__about--btn">Подробнее</button></a>
+						</div>
+						<div class="section__conference--content--items main">
+							<div data-attibute="1">
+								<span class="section__about--text top">
+									Не следует, однако забывать, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт рамки
+								</span>
+								<span class="section__about--text">
+									Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Товарищи! новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации
+								</span>
+								<span class="section__about--text">
+									Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Товарищи! новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации
+								</span>
+								<a href=""><button class="section__about--btn">Подробнее</button></a>
+							</div>
+							<div data-attibute="2">
+								<span class="section__about--text top">
+									2Не следует, однако забывать, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт рамки
+								</span>
+								<span class="section__about--text">
+									Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Товарищи! новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации
+								</span>
+								<span class="section__about--text">
+									Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Товарищи! новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации
+								</span>
+								<a href=""><button class="section__about--btn">Подробнее</button></a>
+							</div>
+							<div data-attibute="3">
+								<span class="section__about--text top">
+									3Не следует, однако забывать, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт рамки
+								</span>
+								<span class="section__about--text">
+									Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Товарищи! новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации
+								</span>
+								<span class="section__about--text">
+									Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Товарищи! новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации
+								</span>
+								<a href=""><button class="section__about--btn">Подробнее</button></a>
+							</div>
+							<div data-attibute="4">
+								<span class="section__about--text top">
+									4Не следует, однако забывать, что реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт рамки
+								</span>
+								<span class="section__about--text">
+									Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Товарищи! новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации
+								</span>
+								<span class="section__about--text">
+									Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Товарищи! новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации
+								</span>
+								<a href=""><button class="section__about--btn">Подробнее</button></a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -249,16 +680,24 @@
 							<span class="active">Календарь мероприятий</span>
 						</div>
 						<div class="section__calendar--content">
-							<div class="calendar__main"></div>
+							<div class="calendar__main">
+								<div class="cal1"></div>
+							</div>
 							<div class="section__calendar--text--content">
 								<div class="section__calendar--text--top">
-									<span class="section__calendar--date">17.03.2022</span>
+									<span class="section__calendar--date">9.04.2022</span>
 									<span class="section__calendar--title">Кому и где обязательно носить маску </span>
 									<span class="section__calendar--text">Не следует, однако забывать, что реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании модели развития.</span>
 									<div class="section__calendar--time">15:00</div> 
 								</div>
 								<div class="section__calendar--text--middle">
-									<span class="section__calendar--date">17.03.2022</span>
+									<span class="section__calendar--date">17.04.2022</span>
+									<span class="section__calendar--title">Кому и где обязательно носить маску </span>
+									<span class="section__calendar--text">Кому и где обязательно носить маску в Нур-Султане – новый указ</span>
+									<div class="section__calendar--time">15:00</div> 
+								</div>
+								<div class="section__calendar--text--middle">
+									<span class="section__calendar--date">21.04.2022</span>
 									<span class="section__calendar--title">Кому и где обязательно носить маску </span>
 									<span class="section__calendar--text">Кому и где обязательно носить маску в Нур-Султане – новый указ</span>
 									<div class="section__calendar--time">15:00</div> 
@@ -444,6 +883,25 @@
 					</div>
 				</div>
 			</footer>
+			
+			<script>
+
+					let todayDate = new Date 
+					const toDay = document.querySelectorAll('.section__calendar--date') 
+					toDay.forEach(el => {
+						el.innerText = `${todayDate.getDate()}.${("0" + (todayDate.getMonth() + 1)).slice(-2)}.${todayDate.getFullYear()}`
+					})
+					const selectContent = document.querySelector('.section__conference--content--items.main')
+					const selectContentScroll = document.querySelector('.scroll')
+					const selectContainer = document.querySelector('.main__tabs--content')
+					const tabSelectMain = (val) => {
+						selectContainer.innerHTML = selectContent.querySelector(`[data-attibute="${val}"]`).innerHTML
+					}
+					const tabSelectScroll = (val) => {
+						document.querySelector('.section__block--content').innerHTML = selectContentScroll.querySelector(`[data-scroll="${val}"]`).innerHTML
+					}
+	
+			</script>
 		<!-- 	</header> -->
 
 		<!-- <main class="main"> -->
@@ -470,5 +928,10 @@
 		<script src="js/slick.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+		<script src="js/clndr.js"></script>
+		<script src="js/demo.js"></script>
 	</body>
 </html>

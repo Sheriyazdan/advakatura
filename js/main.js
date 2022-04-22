@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			document.querySelectorAll('.block__main--items').forEach(el => {
 				el.classList.remove('top')
 			})
-			document.querySelector('.block__main').style.background = `url(../img/main-background${index}.png)`
+			ArrText = ['Предложения РКА в рамках подготовки проекта ежегодного послания «О состоянии конституционной законности в Республике Казахстан»', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laboriosam distinctio modi eaque aliquid nemo necessitatibus similique nostrum. At assumenda velit recusandae, praesentium cum id odio aut iure magni dolor?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit']
+			document.querySelector('.block__main h2').innerText = ArrText[index]
+			document.querySelector('.block__main').style.backgroundImage = `url(../img/main-background${index}.png)`
 			elem.classList.add('top')
 		})
 	})
@@ -27,3 +29,4 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.querySelector('header').classList.toggle('active')
 	}
 });
+
