@@ -151,17 +151,9 @@ main .container{
 	align-items: center;
 	justify-content: space-between;
 }
-.header-top__call {
-}
-.header-top__eyes {
-}
-.header-eyes__link {
-}
 .header-eyes__link img {
 	width: 34px;
 	height: 34px;
-}
-.header-top__whatsapp {
 }
 .header-top__menu {
 	display: flex;
@@ -174,9 +166,9 @@ main .container{
 	width: 18px;
 	height: 18px;
 }
-.lang_block {
-}
-.lang_choice {
+.header-top__link img:hover {
+	transform: scale(1.1);
+	transition: 0.5s all;
 }
 .other_lang {
 	display: none;
@@ -184,7 +176,7 @@ main .container{
 .other_lang.active{
 	padding: 10px;
 	display: flex;
-    flex-direction: column;
+   flex-direction: column;
 	position: absolute;
 	background-color: #FFFFFF;
 }
@@ -1741,7 +1733,7 @@ span.section__projects--title{
 }
 /*------------------------calendar-------------------------------------------------*/
 .calendar__main {
-	max-height: 600px;
+	max-height: 555px;
 	max-width: 553px;
 }
 .cal1 {
