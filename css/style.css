@@ -880,6 +880,10 @@ footer li:hover:after {
 	line-height: 30px;
 	color: #25213C;
 }
+.section__register--content a{
+	max-width: 358px;
+    width: 100%;
+}
 .section__conference--content span{
 	margin-top: 30px;
 	display: block;
@@ -970,6 +974,7 @@ footer li:hover:after {
 	color: #02ADC8;
 }
 .block__presidium--items{
+	transition: 0.2s;
 	height: 670px;
 	width: calc(33% - 66px/2);
 	box-shadow: 0px 2px 50px -27px rgba(92, 104, 148, 0.62);
@@ -1008,7 +1013,6 @@ footer li:hover:after {
 }
 .presidium__img{
 	width: 100%;
-	height: 422px;
 	object-fit: contain;
 }
 .section__conference--main--items{
@@ -1085,7 +1089,11 @@ footer li:hover:after {
 	gap: 50px;
 	align-items: center;
 }
+.section__all--documents{
+	width: 100%;
+}
 .section__all--documents--items{
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -1096,7 +1104,29 @@ footer li:hover:after {
 	cursor: pointer;
 }
 .section__conference--content .block__presidium--items{
-	height: 600px;
+	height: 510px;
+}
+.section__conference--content .block__presidium--items a{
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 18px;
+	color: #02ADC8;
+}
+.block__presidium--items:hover{
+	box-shadow:  0 0 10px 4px #F7E097;
+	transition: 0.2s;
+}
+.section__literature--items:hover{
+	box-shadow:  0 0 10px 4px #F7E097;
+	transition: 0.2s;
+}
+.section__memorandums--items:hover{
+	box-shadow:  0 0 10px 4px #F7E097;
+	transition: 0.2s;
+}
+.section__news--items:hover{
+	box-shadow:  0 0 10px 4px #F7E097;
+	transition: 0.2s;
 }
 .section__conference--content .block__presidium--main span{
 	border-bottom: none;
@@ -1288,6 +1318,7 @@ span.section__projects--title{
 	display: flex;
 }
 .section__memorandums--items{
+	transition: 0.2s;
 	width: calc(33.33% - 100px/2);
 	background: #FFFFFF;
 	box-shadow: 0px 4px 22px -3px rgba(197, 205, 210, 0.22);
@@ -1601,10 +1632,14 @@ span.section__projects--title{
 	align-items: center;
 }
 .section__literature--text span{
+	color: #25213C;
 	margin: 20px 0;
 	padding: 20px 0;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 	border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+.section__literature--flex a{
+	color: #25213C;
 }
 .section__practice--content{
 	display: flex;
