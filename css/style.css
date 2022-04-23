@@ -1720,11 +1720,21 @@ span.section__projects--title{
 .calendar__main .cal1 .clndr .clndr-controls {
 	margin-bottom: 0;
 }
-.calendar__main .cal1 .clndr .clndr-table tr td {
-	vertical-align: center;
+.cal1 .clndr .clndr-table .header-days .header-day{
+	vertical-align: middle !important;
 }
-.header-days .day-main tr {
-	height: auto;
+.cal1 .clndr table tbody tr {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+.calendar__main .cal1 .clndr .clndr-table {
+	margin-top: 20px;
+}
+.calendar__main .cal1 .clndr .clndr-table .header-days .header-day {
+	font-size: 14px;
+}
+.calendar__main .cal1 .clndr .clndr-table tr .day .day-contents {
+	font-size: 14px;
 }
 @media (max-width: 1620px) {
 	.container {
