@@ -1132,6 +1132,13 @@ footer li:hover:after {
 	padding: 40px;
 
 }
+.section__person--content--item{
+	display: flex;
+	justify-content: space-between;
+}
+.section__person--content--item a{
+	width: 33%;
+}
 .section__all--documents--flex img{
 	cursor: pointer;
 }
