@@ -44,7 +44,7 @@
     "<div class='month'><span><%= year %></span>   <%= month %></div>" +
     "<div class='clndr-control-button rightalign'>" +
     "<span class='clndr-previous-button' onclick='renderCalendar()'><img src='img/calendar--button.svg'></span>" +
-    "<span class='clndr-next-button'><img  src='img/calendar--button.svg'></span>" +
+    "<span class='clndr-next-button' onclick='renderCalendar()'><img  src='img/calendar--button.svg'></span>" +
     '</div>' +
     '</div>' +
     "<table class='clndr-table' border='0' cellspacing='0' cellpadding='0'>" +
@@ -1738,6 +1738,9 @@ const renderCalendar = () => {
     document.querySelectorAll('.section__calendar--date').forEach(element => {
       selectDate = element.innerText.split('.')[0].replace(/\D+/g, "")
       let array = document.querySelectorAll('tbody tr td')
+      let lastArr = document.querySelectorAll('tbody tr')[document.querySelectorAll('tbody tr').length - 1]
+      let lastDayDateArr = lastArr.querySelectorAll('td')
+      let lastDayDate = parseInt(lastArr.querySelectorAll('td')[0].innerText)
       let dayDate = parseInt(array[0].innerText)
       if (array[0].innerText !== "1") {
         for (let index = 0; index < array.length; index++) {
@@ -1747,9 +1750,23 @@ const renderCalendar = () => {
           }
         }
       }
+      if (lastDayDate) {
+        for (let i = 0; i < lastDayDateArr.length; i++) {
+          if (lastDayDate > parseInt(lastDayDateArr[i].innerText)) {
+            lastDayDateArr[i].classList.add('lastdate')
+          }
+          else {
+            lastDayDateArr.forEach(el => {
+              el.classList.remove('lastdate')
+            })
+          }
+        }
+      }
+
       array.forEach(el => {
         if (el.innerText == selectDate) el.classList.add('mydate')
       })
+
     })
   }, 0)
 }
