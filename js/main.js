@@ -1,3 +1,17 @@
+$(document).ready(function () {
+	$('.slider').slick({
+		dots: false,
+		adaptiveHeight: true,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		speed: 800,
+		initialSlide: 0,
+		autoplay: false,
+		autoplaySpeed: 800,
+		rows: 1,
+	});
+});
+
 document.addEventListener("DOMContentLoaded", () => {
 	document.querySelectorAll('.block-tabs span').forEach(el => {
 		el.addEventListener('click', () => {
@@ -30,3 +44,50 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 });
 
+let todayDate = new Date 
+	const toDay = document.querySelectorAll('.section__calendar--date') 
+	toDay.forEach(el => {
+		el.innerText = `${todayDate.getDate()}.${("0" + (todayDate.getMonth() + 1)).slice(-2)}.${todayDate.getFullYear()}`
+	})
+	const selectContent = document.querySelector('.section__conference--content--items.main')
+	const selectContentScroll = document.querySelector('.scroll')
+	const selectContainer = document.querySelector('.main__tabs--content')
+	const tabSelectMain = (val) => {
+		selectContainer.innerHTML = selectContent.querySelector(`[data-attibute="${val}"]`).innerHTML
+	}
+	const tabSelectScroll = (val) => {
+	document.querySelector('.section__block--content').innerHTML = selectContentScroll.querySelector(`[data-scroll="${val}"]`).innerHTML
+}
+
+
+
+
+
+const tabsBtn = document.querySelectorAll('.tabs-btn');
+const tabItems = document.querySelectorAll('.tabs__row');
+tabsBtn.forEach(function (item) {
+	item.addEventListener('click', function () {
+		let currentBtn = item;
+		let tabId = currentBtn.getAttribute('data-tab');
+		let currentTab = document.querySelector(tabId);
+
+		if (!currentBtn.classList.contains('active')) {
+
+			tabsBtn.forEach(function (item) {
+				item.classList.remove('active');
+			});
+			tabItems.forEach(function (item) {
+				item.classList.remove('active');
+			});
+			currentBtn.classList.add('active');
+			currentTab.classList.add('active');
+		} else {
+			tabsBtn.forEach(function (item) {
+				item.classList.remove('active');
+			});
+			tabItems.forEach(function (item) {
+				item.classList.remove('active');
+			});
+		}
+	});
+});

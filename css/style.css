@@ -247,8 +247,8 @@ main .container{
 	color: #FFFFFF;
 	height: 100%;
 	display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+   justify-content: flex-start;
+   align-items: flex-end;
 	max-width: 1227px;
 	margin: 0 0 50px 50px;
 	padding-bottom: 50px;
@@ -1782,7 +1782,103 @@ span.section__projects--title{
 	position: relative;
 	top: 3px;
 }
-@media (max-width: 1620px) {
+
+/*-----------------------------------slider-----------------------------------*/
+.slider__item {
+	min-width: 0;
+}
+.slick-list {
+	overflow: hidden;
+}
+/*---Лента слайдов---*/
+.slick-track {
+	display: flex;
+	align-items: flex-start;
+}
+.slider {
+	height: 100%;
+	position: relative;
+	width: 100%;
+	margin-right: 23px;
+	min-width: 0;
+}
+.slider .slick-arrow {
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	margin: -23px 0 0 0;
+	font-size: 0;
+	width: 34.07px;
+	height: 34.07px;
+}  
+.slider .slick-arrow.slick-prev {
+	left: -50px;
+	background-color: #FFF;
+	background-image: url(../img/left-vector.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 16px 16px;
+	width: 54px;
+	height: 54px;
+	border: none;
+	border-radius: 50%;
+}
+.slider .slick-arrow.slick-next {
+	right: -50px;
+	background-color: #FFF;
+	background-image: url(../img/right-vector.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 16px 16px;
+	width: 54px;
+	height: 54px;
+	border: none;
+	border-radius: 50%;
+} 
+.slider .slick-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.slider .slick-dots li {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	height: 7px;
+	margin-top: 10px;
+}
+.slider .slick-dots button {
+	font-size: 0;
+	width: 43px;
+	height: 7px;
+	background: #F29304;
+	border: none;
+}
+.slider .slick-dots li.slick-active button {
+	width: 100px;
+	height: 7px;
+	background: #fff;
+	border-radius: 10px;
+}
+.slider__item {
+	display: flex;
+	border-radius: 30px;
+	width: 100%;
+	min-width: 0;
+}
+
+
+/*---------------------------------------tabs------------------------------*/
+.tabs__row {
+	display: none;
+}
+.tabs__row.active {
+	display: flex;
+}
+
+
+/*-----------------------------------adaptive-----------------------------*/
+@media (max-width: 1720px) {
 	.container {
 		max-width: 1420px;
 	}

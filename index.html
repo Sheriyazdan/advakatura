@@ -13,14 +13,14 @@
 		<link rel="stylesheet" href="css/style.css">
 		<!-- animate-css -->
 		<link rel="stylesheet" href="css/animate.min.css"/>
-		<link rel="stylesheet" href="css/swiper.css">
+		<link rel="stylesheet" href="css/slick">
 		<link rel="stylesheet" href="css/clndr.css">
 		<!-- WoW-js -->
-		<script src="js/wow.min.js"></script>
+		<!-- <script src="js/wow.min.js"></script> -->
 
-		<script>
+		<!-- <script>
 			new WOW().init();
-		</script>
+		</script> -->
 	<title>Advakatura</title>
 	</head>
 	<body>
@@ -712,18 +712,32 @@
 			<section>
 				<div class="container slider__container">
 					<div class="section__person">
-						<!-- <div class="section__person--swiper--btn">
-							<div class="swiper-button-prev _prev"><img src="images/icons/arrow.svg" alt="arrow"></div>
-							<div class="swiper-button-next _next"><img src="images/icons/arrow.svg" alt="arrow"></div>
-						</div> -->
 						<div class="section__person--tabs block-tabs">
-							<span class="active">Президиум</span>
-							<span>Председатель</span>
-							<span>Заместитель председателя</span>
-							<span>Председатель НКС</span>
+							<div class="slider">
+								<div class="slider__item item">
+									<div class="tabs-btn active" data-tab="#tab_1">
+										<span>Президиум</span>
+									</div>
+								</div> 
+								<div class="slider__item item">
+									<div class="tabs-btn" data-tab="#tab_2">
+										<span>Председатель</span>
+									</div>
+								</div>
+								<div class="slider__item item">
+									<div class="tabs-btn" data-tab="#tab_3">
+										<span>Заместитель председателя</span>
+									</div>
+								</div>
+								<div class="slider__item item">
+									<div class="tabs-btn" data-tab="#tab_4">
+										<span>Председатель НКС</span>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="section__person--content--item">
-									<a href="">
+						<div class="section__person--content--item tabs__row active" id="tab_1">
+								<a href="">
 									<div class="section__person--content">
 										<div class="section__person--items">
 											<img src="img/block-person.png" alt="person1">
@@ -731,8 +745,8 @@
 											<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
 										</div>
 									</div>
-									</a>
-									<a href="">
+								</a>
+								<a href="">
 									<div class="section__person--content">
 										<div class="section__person--items">
 											<img src="img/block-person.png" alt="person1">
@@ -740,38 +754,198 @@
 											<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
 										</div>
 									</div>
-									</a>
-										<a href="">
-										<div class="section__person--content">
-											<div class="section__person--items">
-												<img src="img/block-person.png" alt="person1">
-												<span class="section__person--name">Калбаев Нураден Елемесович</span>
-												<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
-											</div>
+								</a>
+								<a href="">
+									<div class="section__person--content">
+										<div class="section__person--items">
+											<img src="img/block-person.png" alt="person1">
+											<span class="section__person--name">Калбаев Нураден Елемесович</span>
+											<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
 										</div>
-									</a>
-									<a href="">
-										<div class="section__person--content">
-											<div class="section__person--items">
-												<img src="img/block-person.png" alt="person1">
-												<span class="section__person--name">Калбаев Нураден Елемесович</span>
-												<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
-											</div>
+									</div>
+								</a>
+								<a href="">
+									<div class="section__person--content">
+										<div class="section__person--items">
+											<img src="img/block-person.png" alt="person1">
+											<span class="section__person--name">Калбаев Нураден Елемесович</span>
+											<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
 										</div>
-									</a>
-									<a href="">
-										<div class="section__person--content">
-											<div class="section__person--items">
-												<img src="img/block-person.png" alt="person1">
-												<span class="section__person--name">Калбаев Нураден Елемесович</span>
-												<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
-											</div>
-										</div>
-									</a>
+									</div>
+								</a>
+								<a href="">
+									<div class="section__person--content">
+										<div class="section__person--items">
+										<img src="img/block-person.png" alt="person1">
+										<span class="section__person--name">Калбаев Нураден Елемесович</span>
+										<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="section__person--content--item tabs__row" id="tab_2">
+							<a href="">
+								<div class="section__person--content">
+									<div class="section__person--items">
+										<img src="img/block-person.png" alt="person1">
+										<span class="section__person--name">Калбаев Нураден Елемесович</span>
+										<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="section__person--content">
+									<div class="section__person--items">
+										<img src="img/block-person.png" alt="person1">
+										<span class="section__person--name">Калбаев Нураден Елемесович</span>
+										<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="section__person--content">
+									<div class="section__person--items">
+										<img src="img/block-person.png" alt="person1">
+										<span class="section__person--name">Калбаев Нураден Елемесович</span>
+										<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="section__person--content">
+									<div class="section__person--items">
+										<img src="img/block-person.png" alt="person1">
+										<span class="section__person--name">Калбаев Нураден Елемесович</span>
+										<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="section__person--content">
+									<div class="section__person--items">
+									<img src="img/block-person.png" alt="person1">
+									<span class="section__person--name">Калбаев Нураден Елемесович</span>
+									<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="section__person--content--item tabs__row" id="tab_3">
+							<a href="">
+								<div class="section__person--content">
+									<div class="section__person--items">
+										<img src="img/block-person.png" alt="person1">
+										<span class="section__person--name">Калбаев Нураден Елемесович</span>
+										<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="section__person--content">
+									<div class="section__person--items">
+										<img src="img/block-person.png" alt="person1">
+										<span class="section__person--name">Калбаев Нураден Елемесович</span>
+										<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="section__person--content">
+									<div class="section__person--items">
+										<img src="img/block-person.png" alt="person1">
+										<span class="section__person--name">Калбаев Нураден Елемесович</span>
+										<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="section__person--content">
+									<div class="section__person--items">
+										<img src="img/block-person.png" alt="person1">
+										<span class="section__person--name">Калбаев Нураден Елемесович</span>
+										<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="section__person--content">
+									<div class="section__person--items">
+									<img src="img/block-person.png" alt="person1">
+									<span class="section__person--name">Калбаев Нураден Елемесович</span>
+									<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="section__person--content--item tabs__row" id="tab_4">
+						<a href="">
+							<div class="section__person--content">
+								<div class="section__person--items">
+									<img src="img/block-person.png" alt="person1">
+									<span class="section__person--name">Калбаев Нураден Елемесович</span>
+									<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<div class="section__person--content">
+								<div class="section__person--items">
+									<img src="img/block-person.png" alt="person1">
+									<span class="section__person--name">Калбаев Нураден Елемесович</span>
+									<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<div class="section__person--content">
+								<div class="section__person--items">
+									<img src="img/block-person.png" alt="person1">
+									<span class="section__person--name">Калбаев Нураден Елемесович</span>
+									<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<div class="section__person--content">
+								<div class="section__person--items">
+									<img src="img/block-person.png" alt="person1">
+									<span class="section__person--name">Калбаев Нураден Елемесович</span>
+									<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<div class="section__person--content">
+								<div class="section__person--items">
+								<img src="img/block-person.png" alt="person1">
+								<span class="section__person--name">Калбаев Нураден Елемесович</span>
+								<span class="section__person--text">Адвокат Мангистауской областной коллегии адвокатов</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				</div>
+			</div>
+			</section>
+			<!-- <section class="slider-page">
+				<div class="slider__container">
+					<div class="slider">
+						<div class="slider__item">
+							<img src="img/arrow-news.png" alt="">
+						</div>
+						<div class="slider__item">
+							<img src="img/arrow-news.png" alt="">
+						</div>
+						<div class="slider__item">
+							<img src="img/arrow-news.png" alt="">
+						</div>
+						<div class="slider__item">
+							<img src="img/arrow-news.png" alt="">
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
+			
 			<footer>
 				<div class="container">
 					<div class="footer__block">
@@ -859,23 +1033,6 @@
 				</div>
 			</footer>
 			
-			<script>
-					let todayDate = new Date 
-					const toDay = document.querySelectorAll('.section__calendar--date') 
-					toDay.forEach(el => {
-						el.innerText = `${todayDate.getDate()}.${("0" + (todayDate.getMonth() + 1)).slice(-2)}.${todayDate.getFullYear()}`
-					})
-					const selectContent = document.querySelector('.section__conference--content--items.main')
-					const selectContentScroll = document.querySelector('.scroll')
-					const selectContainer = document.querySelector('.main__tabs--content')
-					const tabSelectMain = (val) => {
-						selectContainer.innerHTML = selectContent.querySelector(`[data-attibute="${val}"]`).innerHTML
-					}
-					const tabSelectScroll = (val) => {
-						document.querySelector('.section__block--content').innerHTML = selectContentScroll.querySelector(`[data-scroll="${val}"]`).innerHTML
-					}
-	
-			</script>
 		<!-- 	</header> -->
 
 		<!-- <main class="main"> -->
@@ -896,16 +1053,16 @@
 
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="js/swiper.js"></script>
-		<script src="js/jquery-3.6.0.min.js"></script>
-		<script src="js/popper.min.js"></script>
-		<script src="js/slick.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
-		<script src="js/clndr.js"></script>
-		<script src="js/demo.js"></script>
-		<script src="js/main.js"></script>
+			<script src="js/jquery-3.6.0.min.js"></script>
+			<script src="js/slick.min.js"></script>
+			<script src="js/popper.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/main.js"></script>
+			<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+			<script src="js/clndr.js"></script>
+			<script src="js/demo.js"></script> -->
+		</div>
 	</body>
 </html>
