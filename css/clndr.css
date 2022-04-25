@@ -80,6 +80,8 @@ line-height: 18px;
 text-transform: uppercase;
 
 color: #FFFFFF;
+display: flex;
+gap: 20px;
 }
 .cal1 .clndr .clndr-controls .clndr-control-button {
   float: left;

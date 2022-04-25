@@ -41,10 +41,10 @@
     "<div class='clndr-controls'>" +
     "<div class='clndr-control-button'>" +
     '</div>' +
-    "<div class='month'><%= year %>   <%= month %></div>" +
+    "<div class='month'><span><%= year %></span>   <%= month %></div>" +
     "<div class='clndr-control-button rightalign'>" +
     "<span class='clndr-previous-button' onclick='renderCalendar()'><img src='img/calendar--button.svg'></span>" +
-    "<span class='clndr-next-button' onclick='renderCalendar()'><img  src='img/calendar--button.svg'></span>" +
+    "<span class='clndr-next-button'><img  src='img/calendar--button.svg'></span>" +
     '</div>' +
     '</div>' +
     "<table class='clndr-table' border='0' cellspacing='0' cellpadding='0'>" +
@@ -255,7 +255,6 @@
           // If the new interval period is less than the desired length
           // of time, or before the starting interval, then correct it.
           dayDiff = this.intervalStart.diff(this.intervalEnd, 'days');
-
           if (dayDiff < this.options.lengthOfTime.days ||
             this.intervalEnd.isBefore(this.intervalStart)
           ) {
@@ -1719,7 +1718,11 @@ window.addEventListener("DOMContentLoaded", () => {
       if (el.innerText == todayDate.getDate()) el.classList.add('mydate')
     })
   })
-
+  for (let index = 0; index < 12; index++) {
+    document.querySelector('.clndr-previous-button').click()
+  }
+  let textmonth = document.querySelector('.month span').innerText
+  document.querySelector('.month span').innerText = +textmonth + 1
 })
 const renderCalendar = () => {
   setTimeout(() => {

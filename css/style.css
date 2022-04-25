@@ -1134,10 +1134,12 @@ footer li:hover:after {
 }
 .section__person--content--item{
 	display: flex;
-	justify-content: space-between;
+	gap: 98px;
+	padding: 0 0 20px 20px;
+	overflow: auto;
 }
 .section__person--content--item a{
-	width: 33%;
+	width: 468px;
 }
 .section__all--documents--flex img{
 	cursor: pointer;

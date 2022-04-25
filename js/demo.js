@@ -1,7 +1,7 @@
 // Call this from the developer console and you can control both instances
 var calendars = {};
 
-$(document).ready( function() {
+$(document).ready(function () {
     console.info(
         'Welcome to the CLNDR demo. Click around on the calendars and' +
         'the console will log different events that fire.');
@@ -37,37 +37,38 @@ $(document).ready( function() {
         events: eventArray,
         clickEvents: {
             click: function (target) {
-                console.log('Cal-1 clicked: ', target);
+                // console.log('Cal-1 clicked: ', target);
+                return target
             },
             today: function () {
-                console.log('Cal-1 today');
+                // console.log('Cal-1 today');
             },
             nextMonth: function () {
-                console.log('Cal-1 next month');
+                // console.log('Cal-1 next month');
             },
             previousMonth: function () {
-                console.log('Cal-1 previous month');
+                // console.log('Cal-1 previous month');
             },
             onMonthChange: function () {
-                console.log('Cal-1 month changed');
+                // console.log('Cal-1 month changed');
             },
             nextYear: function () {
-                console.log('Cal-1 next year');
+                // console.log('Cal-1 next year');
             },
             previousYear: function () {
-                console.log('Cal-1 previous year');
+                // console.log('Cal-1 previous year');
             },
             onYearChange: function () {
-                console.log('Cal-1 year changed');
+                // console.log('Cal-1 year changed');
             },
             nextInterval: function () {
-                console.log('Cal-1 next interval');
+                // console.log('Cal-1 next interval');
             },
             previousInterval: function () {
-                console.log('Cal-1 previous interval');
+                // console.log('Cal-1 previous interval');
             },
             onIntervalChange: function () {
-                console.log('Cal-1 interval changed');
+                // console.log('Cal-1 interval changed');
             }
         },
         multiDayEvents: {
@@ -137,7 +138,7 @@ $(document).ready( function() {
     });
 
     // Bind all clndrs to the left and right arrow keys
-    $(document).keydown( function(e) {
+    $(document).keydown(function (e) {
         // Left arrow
         if (e.keyCode == 37) {
             calendars.clndr1.back();
