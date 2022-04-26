@@ -2,12 +2,35 @@ $(document).ready(function () {
 	$('.slider').slick({
 		dots: false,
 		adaptiveHeight: true,
-		slidesToShow: 5,
+		slidesToShow: 4,
 		slidesToScroll: 1,
 		speed: 800,
 		initialSlide: 0,
 		autoplay: false,
 		autoplaySpeed: 800,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+				}
+			}, {
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+				}
+			}, {
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					dots: true,
+				}
+			}
+		]
 	});
 });
 
@@ -40,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		val.classList.toggle('active')
 		document.querySelector('.header__bottom.header-bottom').classList.toggle('active')
 		document.querySelector('header').classList.toggle('active')
+		document.body.classList.toggle('hidden');
 	}
 });
 
@@ -92,40 +116,63 @@ tabsBtn.forEach(function (item) {
 });
 
 
-const menuLink = document.querySelectorAll('.menu__link');
+const menuLink = document.querySelectorAll('.menu__list');
 menuLink.forEach((elem) => {
-	elem.addEventListener('click', function () {
-		elem.parentElement.classList.toggle("active");
+	elem.addEventListener('mouseenter', function () {
+		elem.classList.add("active");
+	})
+	elem.addEventListener('mouseleave', function () {
+		elem.classList.toggle("active");
 	})
 });
 
 const mainBlock = document.querySelectorAll('.block__main--items');
-const mainText = document.querySelector('.main-text');
+const mainText = document.querySelectorAll('.main-block__text');
 
-
-tabsBtn.forEach(function (item) {
-	item.addEventListener('click', function () {
-		let currentBtn = item;
-		let tabId = currentBtn.getAttribute('data-tab');
-		let currentTab = document.querySelector(tabId);
-
-		if (!currentBtn.classList.contains('active')) {
-
-			tabsBtn.forEach(function (item) {
-				item.classList.remove('active');
+mainBlock.forEach((elem) => {
+	elem.addEventListener('mouseenter', function () {
+		console.log(elem)
+		let linkBtn = elem;
+		let tabLink = linkBtn.getAttribute('data-link');
+		let currentTab = document.querySelector(tabLink);
+		console.log(currentTab)
+		if (!currentTab.classList.contains('active')) {
+			mainBlock.forEach(function (elem) {
+				elem.classList.remove('active');
 			});
-			tabItems.forEach(function (item) {
-				item.classList.remove('active');
+			mainText.forEach(function (elem) {
+				elem.classList.remove('active');
 			});
-			currentBtn.classList.add('active');
+			linkBtn.classList.add('active');
 			currentTab.classList.add('active');
-		} else {
-			tabsBtn.forEach(function (item) {
-				item.classList.remove('active');
-			});
-			tabItems.forEach(function (item) {
-				item.classList.remove('active');
-			});
 		}
 	});
-});
+})
+
+// mainBlock.forEach(function (item) {
+// 	item.addEventListener('mouseover', function () {
+// 		let currentBtn = item;
+// 		let tabLink = currentBtn.getAttribute('data-link');
+// 		let currentTab = document.querySelector(tabLink);
+
+// 		if (!currentBtn.classList.contains('active')) {
+
+// 			mainBlock.forEach(function (item) {
+// 				item.classList.remove('active');
+// 			});
+// 			mainText.forEach(function (item) {
+// 				item.classList.remove('active');
+// 			});
+// 			currentBtn.classList.add('active');
+// 			currentTab.classList.add('active');
+// 		} else {
+// 			mainBlock.forEach(function (item) {
+// 				item.classList.remove('active');
+// 			});
+// 			mainText.forEach(function (item) {
+// 				item.classList.remove('active');
+// 			});
+// 		}
+// 	});
+// });
+
