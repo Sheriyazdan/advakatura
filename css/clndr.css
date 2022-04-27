@@ -72,16 +72,16 @@ h5 {
   float: left;
   width: 33%;
   font-family: 'Noto Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 18px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
 
-text-transform: uppercase;
+  text-transform: uppercase;
 
-color: #FFFFFF;
-display: flex;
-gap: 20px;
+  color: #FFFFFF;
+  display: flex;
+  gap: 20px;
 }
 .cal1 .clndr .clndr-controls .clndr-control-button {
   float: left;

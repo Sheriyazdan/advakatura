@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			})
 			ArrText = ['Предложения РКА в рамках подготовки проекта ежегодного послания «О состоянии конституционной законности в Республике Казахстан»', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laboriosam distinctio modi eaque aliquid nemo necessitatibus similique nostrum. At assumenda velit recusandae, praesentium cum id odio aut iure magni dolor?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit']
 			document.querySelector('.block__main h2').innerText = ArrText[index]
-			document.querySelector('.block__main').style.backgroundImage = `url(../img/main-background${index}.png)`
+			document.querySelector('.block__main').style.backgroundImage = `url(./img/main-background${index}.png)`
 			elem.classList.add('top')
 		})
 	})
@@ -67,18 +67,18 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 });
 
-let todayDate = new Date 
-	const toDay = document.querySelectorAll('.section__calendar--date') 
-	toDay.forEach(el => {
-		el.innerText = `${todayDate.getDate()}.${("0" + (todayDate.getMonth() + 1)).slice(-2)}.${todayDate.getFullYear()}`
-	})
-	const selectContent = document.querySelector('.section__conference--content--items.main')
-	const selectContentScroll = document.querySelector('.scroll')
-	const selectContainer = document.querySelector('.main__tabs--content')
-	const tabSelectMain = (val) => {
-		selectContainer.innerHTML = selectContent.querySelector(`[data-attibute="${val}"]`).innerHTML
-	}
-	const tabSelectScroll = (val) => {
+let todayDate = new Date
+const toDay = document.querySelectorAll('.section__calendar--date')
+toDay.forEach(el => {
+	el.innerText = `${todayDate.getDate()}.${("0" + (todayDate.getMonth() + 1)).slice(-2)}.${todayDate.getFullYear()}`
+})
+const selectContent = document.querySelector('.section__conference--content--items.main')
+const selectContentScroll = document.querySelector('.scroll')
+const selectContainer = document.querySelector('.main__tabs--content')
+const tabSelectMain = (val) => {
+	selectContainer.innerHTML = selectContent.querySelector(`[data-attibute="${val}"]`).innerHTML
+}
+const tabSelectScroll = (val) => {
 	document.querySelector('.section__block--content').innerHTML = selectContentScroll.querySelector(`[data-scroll="${val}"]`).innerHTML
 }
 
