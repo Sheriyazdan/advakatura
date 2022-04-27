@@ -293,7 +293,15 @@ main .container{
 .header-bottom__menu li .menu__link:hover{
 	color: #02ADC8;
 }
+.discussed_projects .section__projects--items--text span p{
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 18px;
+	color: #02ADC8;
+	margin-right: 5px;
+}
 .header-menu__two {
+	z-index: 21;
 	position: absolute;
 	top: 80%;
 	left: -10px;
