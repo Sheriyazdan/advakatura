@@ -179,9 +179,16 @@ main .container{
 	align-items: center;
 	justify-content: space-between;
 }
-.header-eyes__link img {
+.header-eyes__link {
 	width: 34px;
 	height: 34px;
+}
+.header-eyes__link img {
+	width: 100%;
+	height: 100%;
+}
+.header-eyes:hover path {
+	fill: #DEBB2A;
 }
 .header-top__menu {
 	display: flex;
