@@ -2315,7 +2315,7 @@ span.section__projects--title{
 	.block-main_text {
 		font-size: 16px;
 	}
-	/* .header-bottom__menu li .header-menu__two {
+	.header-bottom__menu li .header-menu__two {
 		position: relative;
 		top: 120%;
 		left: 0;
@@ -2374,7 +2374,7 @@ span.section__projects--title{
 	}
 	.header-menu__two li:not(:last-child) {
 		border: none;
-	} */
+	}
 }
 @media (max-width: 992px) {
 	.section__block{
