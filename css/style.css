@@ -1338,6 +1338,9 @@ footer li:hover:after {
 .section__all--documents--icons img{
 	cursor: pointer;
 }
+.section__register--items.active{
+	background: #007C8F;
+}
 .section__projects--items{
 	margin-top: 50px;
 
@@ -1686,13 +1689,30 @@ span.section__projects--title{
 .section__news--content{
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: 22px;
-	justify-content: space-between;
+    gap: 22px;
+    justify-content: flex-start;
+}
+.section__event--content .cal1 .month span{
+	margin-top: 0;
+}
+.section__history--text img{
+	object-fit: cover;
 }
 .section-about__button {
 	width: 300px;
 	height: 60px;
 	margin-top: 50px;
+}
+.main_image{
+	width: 100%;
+}
+.section__history--flex--item img{
+	width: 40%;
+}
+.terrioral__last div span{
+	white-space: nowrap;
+	margin-right: 10px;
+	font-size: 14px;
 }
 .section__new-page--content{
 	display: flex;

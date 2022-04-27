@@ -97,10 +97,10 @@
                 <div class="section__conference--content">
                     <div class="section__thanks--content">
                         <div class="section__register--content">
-                            <a href=""><div class="section__register--items">Сертификаты</div></a>
-                            <a href=""><div class="section__register--items">Дипломы</div></a>
-                            <a href=""><div class="section__register--items">Награды</div></a>
-                            <a href=""><div class="section__register--items">Благодарственные письма</div></a>
+                            <div class="section__register--items" onclick="selectTabYears(this,1)">Сертификаты</div>
+                            <div class="section__register--items" onclick="selectTabYears(this,2)">Дипломы</div>
+                            <div class="section__register--items" onclick="selectTabYears(this,3)">Награды</div>
+                            <div class="section__register--items" onclick="selectTabYears(this,4)">Благодарственные письма</div>
                             
                         </div>
                         <div class="section__all--documents">
@@ -150,6 +150,86 @@
             </div>
         </div>
     </section>
+    <div class="section__conference--content--items">
+        <div data-set="1">
+            <div class="section__all--documents--items">
+                <div class="section__all--documents--flex">
+                    <a href=""><img src="img/document-img.png" alt=""></a>
+                    <span>Аттестат № 015.2019.364 соответствия объекта аттестации требованиям информационной безопасности</span>
+                </div>
+                <div class="section__all--documents--icons">
+                    <a href=""><img src="img/download-icon.png" alt=""></a>
+                    <a href=""><img src="img/view-icon.png" alt=""></a>
+                </div>
+            </div>
+            <div class="section__all--documents--items">
+                <div class="section__all--documents--flex">
+                    <a href=""><img src="img/document-img.png" alt=""></a>
+                    <span>Аттестат № 015.2019.364 соответствия объекта аттестации требованиям информационной безопасности</span>
+                </div>
+                <div class="section__all--documents--icons">
+                    <a href=""><img src="img/download-icon.png" alt=""></a>
+                    <a href=""><img src="img/view-icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div data-set="2">
+            <div class="section__all--documents--items">
+                <div class="section__all--documents--flex">
+                    <a href=""><img src="img/document-img.png" alt=""></a>
+                    <span>Аттестат № 015.2019.364 соответствия объекта аттестации требованиям информационной безопасности</span>
+                </div>
+                <div class="section__all--documents--icons">
+                    <a href=""><img src="img/download-icon.png" alt=""></a>
+                    <a href=""><img src="img/view-icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div data-set="3">
+            <div class="section__all--documents--items">
+                <div class="section__all--documents--flex">
+                    <a href=""><img src="img/document-img.png" alt=""></a>
+                    <span>Аттестат № 015.2019.364 соответствия объекта аттестации требованиям информационной безопасности</span>
+                </div>
+                <div class="section__all--documents--icons">
+                    <a href=""><img src="img/download-icon.png" alt=""></a>
+                    <a href=""><img src="img/view-icon.png" alt=""></a>
+                </div>
+            </div>
+            <div class="section__all--documents--items">
+                <div class="section__all--documents--flex">
+                    <a href=""><img src="img/document-img.png" alt=""></a>
+                    <span>Аттестат № 015.2019.364 соответствия объекта аттестации требованиям информационной безопасности</span>
+                </div>
+                <div class="section__all--documents--icons">
+                    <a href=""><img src="img/download-icon.png" alt=""></a>
+                    <a href=""><img src="img/view-icon.png" alt=""></a>
+                </div>
+            </div>
+            <div class="section__all--documents--items">
+                <div class="section__all--documents--flex">
+                    <a href=""><img src="img/document-img.png" alt=""></a>
+                    <span>Аттестат № 015.2019.364 соответствия объекта аттестации требованиям информационной безопасности</span>
+                </div>
+                <div class="section__all--documents--icons">
+                    <a href=""><img src="img/download-icon.png" alt=""></a>
+                    <a href=""><img src="img/view-icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div data-set="4">
+            <div class="section__all--documents--items">
+                <div class="section__all--documents--flex">
+                    <a href=""><img src="img/document-img.png" alt=""></a>
+                    <span>Аттестат № 015.2019.364 соответствия объекта аттестации требованиям информационной безопасности</span>
+                </div>
+                <div class="section__all--documents--icons">
+                    <a href=""><img src="img/download-icon.png" alt=""></a>
+                    <a href=""><img src="img/view-icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="container">
             <div class="footer__block">
@@ -236,5 +316,20 @@
             </div>
         </div>
     </footer>
+    <script>
+            const selectTabYears  = (val,index) => {
+            let dinanicContent = document.querySelector('.section__all--documents')
+            let dinamicItems = document.querySelector(`.section__conference--content--items [data-set="${index}"]`)
+            val.parentElement.querySelectorAll('.section__register--items').forEach( el => {
+                el.classList.remove('active')
+            })
+            val.classList.add('active')
+            dinanicContent.innerHTML = dinamicItems.innerHTML
+            
+        }
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.section__register--content .section__register--items')[0].click()
+        })
+    </script>
 </body>
 </html>
