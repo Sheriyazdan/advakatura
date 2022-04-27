@@ -471,6 +471,11 @@ section .container{
 	background: #FFFFFF;
 	box-shadow: 0px 2px 50px -27px rgba(92, 104, 148, 0.62);
 }
+.arrow__news{
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
 .section__block--content{
    padding-top: 50px;
    padding-bottom: 33px;

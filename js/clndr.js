@@ -1693,36 +1693,43 @@
 
 window.addEventListener("DOMContentLoaded", () => {
   let todayDate = new Date
-  let arrayDays = document.querySelectorAll('tr .header-day')
-  arrayDays[arrayDays.length - 7].innerText = "Пн"
-  arrayDays[arrayDays.length - 6].innerText = "Вт"
-  arrayDays[arrayDays.length - 5].innerText = "Ср"
-  arrayDays[arrayDays.length - 4].innerText = "Чт"
-  arrayDays[arrayDays.length - 3].innerText = "Пт"
-  arrayDays[arrayDays.length - 2].innerText = "Сб"
-  arrayDays[arrayDays.length - 1].innerText = "Вс"
 
-  document.querySelectorAll('.section__calendar--date').forEach(element => {
-    selectDate = element.innerText.split('.')[0].replace(/\D+/g, "")
-    let array = document.querySelectorAll('tbody tr td')
-    let dayDate = parseInt(array[0].innerText)
-    if (array[0].innerText !== "1") {
-      for (let index = 0; index < array.length; index++) {
-        if (dayDate <= parseInt(array[index].innerText)) {
-          array[index].classList.add('lastdate')
-          dayDate = parseInt(array[index].innerText)
+  setTimeout(() => {
+    let arrayDays = document.querySelectorAll('tr .header-day')
+    arrayDays[arrayDays.length - 7].innerText = "Пн"
+    arrayDays[arrayDays.length - 6].innerText = "Вт"
+    arrayDays[arrayDays.length - 5].innerText = "Ср"
+    arrayDays[arrayDays.length - 4].innerText = "Чт"
+    arrayDays[arrayDays.length - 3].innerText = "Пт"
+    arrayDays[arrayDays.length - 2].innerText = "Сб"
+    arrayDays[arrayDays.length - 1].innerText = "Вс"
+
+    document.querySelectorAll('.section__calendar--date').forEach(element => {
+      selectDate = element.innerText.split('.')[0].replace(/\D+/g, "")
+      let array = document.querySelectorAll('tbody tr td')
+      let dayDate = parseInt(array[0].innerText)
+      if (array[0].innerText !== "1") {
+        for (let index = 0; index < array.length; index++) {
+          if (dayDate <= parseInt(array[index].innerText)) {
+            array[index].classList.add('lastdate')
+            dayDate = parseInt(array[index].innerText)
+          }
         }
       }
-    }
-    array.forEach(el => {
-      if (el.innerText == todayDate.getDate()) el.classList.add('mydate')
+      array.forEach(el => {
+        if (el.innerText == todayDate.getDate()) {
+          el.classList.add('mydate')
+        }
+      })
+
     })
-  })
-  for (let index = 0; index < 12; index++) {
-    document.querySelector('.clndr-previous-button').click()
-  }
-  let textmonth = document.querySelector('.month span').innerText
-  document.querySelector('.month span').innerText = +textmonth + 1
+    for (let index = 0; index < 12; index++) {
+      document.querySelector('.clndr-previous-button').click()
+    }
+    let textmonth = document.querySelector('.month span').innerText
+    document.querySelector('.month span').innerText = +textmonth + 1
+  }, 0)
+
 })
 const renderCalendar = () => {
   setTimeout(() => {
@@ -1742,10 +1749,17 @@ const renderCalendar = () => {
       let lastDayDateArr = lastArr.querySelectorAll('td')
       let lastDayDate = parseInt(lastArr.querySelectorAll('td')[0].innerText)
       let dayDate = parseInt(array[0].innerText)
+
+      array.forEach(el => {
+        if (el.innerText == todayDate.getDate()) {
+          el.classList.add('mydate')
+        }
+      })
       if (array[0].innerText !== "1") {
         for (let index = 0; index < array.length; index++) {
           if (dayDate <= parseInt(array[index].innerText)) {
             array[index].classList.add('lastdate')
+            array[index].classList.remove('mydate')
             dayDate = parseInt(array[index].innerText)
           }
         }
@@ -1763,9 +1777,6 @@ const renderCalendar = () => {
         }
       }
 
-      array.forEach(el => {
-        if (el.innerText == selectDate) el.classList.add('mydate')
-      })
 
     })
   }, 0)

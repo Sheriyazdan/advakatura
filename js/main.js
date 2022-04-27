@@ -1,38 +1,41 @@
-$(document).ready(function () {
-	$('.slider').slick({
-		dots: false,
-		adaptiveHeight: true,
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		speed: 800,
-		initialSlide: 0,
-		autoplay: false,
-		autoplaySpeed: 800,
-		responsive: [
-			{
-				breakpoint: 1200,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 1,
+const slider = document.querySelector('.slider')
+if (slider) {
+	$(document).ready(function () {
+		$('.slider').slick({
+			dots: false,
+			adaptiveHeight: true,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			speed: 800,
+			initialSlide: 0,
+			autoplay: false,
+			autoplaySpeed: 800,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+					}
+				}, {
+					breakpoint: 900,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+					}
+				}, {
+					breakpoint: 768,
+					settings: {
+						arrows: false,
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						dots: true,
+					}
 				}
-			}, {
-				breakpoint: 900,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
-				}
-			}, {
-				breakpoint: 768,
-				settings: {
-					arrows: false,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					dots: true,
-				}
-			}
-		]
+			]
+		});
 	});
-});
+}
 
 document.addEventListener("DOMContentLoaded", () => {
 	document.querySelectorAll('.block-tabs span').forEach(el => {
@@ -81,8 +84,6 @@ const tabSelectMain = (val) => {
 const tabSelectScroll = (val) => {
 	document.querySelector('.section__block--content').innerHTML = selectContentScroll.querySelector(`[data-scroll="${val}"]`).innerHTML
 }
-
-
 
 
 
