@@ -5,7 +5,7 @@ if (slider) {
 			dots: false,
 			adaptiveHeight: true,
 			slidesToShow: 4,
-			slidesToScroll: 1,
+			slidesToScroll: 4,
 			speed: 800,
 			initialSlide: 0,
 			autoplay: false,
@@ -15,13 +15,13 @@ if (slider) {
 					breakpoint: 1200,
 					settings: {
 						slidesToShow: 3,
-						slidesToScroll: 1,
+						slidesToScroll: 3,
 					}
 				}, {
 					breakpoint: 900,
 					settings: {
 						slidesToShow: 2,
-						slidesToScroll: 1,
+						slidesToScroll: 2,
 					}
 				}, {
 					breakpoint: 768,
@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			document.querySelectorAll('.block__main--items').forEach(el => {
 				el.classList.remove('top')
 			})
-			ArrText = ['Предложения РКА в рамках подготовки проекта ежегодного послания «О состоянии конституционной законности в Республике Казахстан»', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laboriosam distinctio modi eaque aliquid nemo necessitatibus similique nostrum. At assumenda velit recusandae, praesentium cum id odio aut iure magni dolor?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit']
-			document.querySelector('.block__main h2').innerText = ArrText[index]
-			document.querySelector('.block__main').style.backgroundImage = `url(./img/main-background${index}.png)`
+			// ArrText = ['Предложения РКА в рамках подготовки проекта ежегодного послания «О состоянии конституционной законности в Республике Казахстан»', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laboriosam distinctio modi eaque aliquid nemo necessitatibus similique nostrum. At assumenda velit recusandae, praesentium cum id odio aut iure magni dolor?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit']
+			// document.querySelector('.block__main h2').innerText = ArrText[index]
+			// document.querySelector('.block__main').style.backgroundImage = `url(./img/main-background${index}.png)`
 			elem.classList.add('top')
 		})
 	})
@@ -118,17 +118,22 @@ tabsBtn.forEach(function (item) {
 
 
 const menuLink = document.querySelectorAll('.menu__list');
+console.log(window.clientWidth);
 menuLink.forEach((elem) => {
-	elem.addEventListener('mouseenter', function () {
-		elem.classList.add("active");
-	})
-	elem.addEventListener('mouseleave', function () {
-		elem.classList.toggle("active");
-	})
-	elem.addEventListener('click', function () {
-		elem.classList.add("click");
-	});
+	if (window.innerWidth > 1200) {
+		elem.addEventListener('mouseenter', function () {
+			elem.classList.add("active");
+		})
+		elem.addEventListener('mouseleave', function () {
+			elem.classList.toggle("active");
+		})
+	} else {
+		elem.addEventListener('click', function () {
+			elem.classList.toggle('active');
+		})
+	}
 });
+
 
 const mainBlock = document.querySelectorAll('.block__main--items');
 const mainText = document.querySelectorAll('.main-block__text');
@@ -152,31 +157,4 @@ mainBlock.forEach((elem) => {
 		}
 	});
 })
-
-// mainBlock.forEach(function (item) {
-// 	item.addEventListener('mouseover', function () {
-// 		let currentBtn = item;
-// 		let tabLink = currentBtn.getAttribute('data-link');
-// 		let currentTab = document.querySelector(tabLink);
-
-// 		if (!currentBtn.classList.contains('active')) {
-
-// 			mainBlock.forEach(function (item) {
-// 				item.classList.remove('active');
-// 			});
-// 			mainText.forEach(function (item) {
-// 				item.classList.remove('active');
-// 			});
-// 			currentBtn.classList.add('active');
-// 			currentTab.classList.add('active');
-// 		} else {
-// 			mainBlock.forEach(function (item) {
-// 				item.classList.remove('active');
-// 			});
-// 			mainText.forEach(function (item) {
-// 				item.classList.remove('active');
-// 			});
-// 		}
-// 	});
-// });
 

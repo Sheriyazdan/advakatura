@@ -273,7 +273,7 @@ main .container{
 	position: absolute;
 	background-position: center center;
 	background-size: 100%;
-	top: 4px;
+	top: 5px;
 	right: 0;
 	width: 10px;
 	height: 10px;
@@ -327,8 +327,8 @@ main .container{
 	color: #02ADC8;
 }
 .block__main{
-	background: url(../img/main-background0.png);
-	height: 625px;
+	/* background: url(../img/main-background0.png); */
+	max-height: 625px;
 	transition: all 0.2s cubic-bezier(0.89, 0.25, 0, 1.1) 0.2s;
 	display: flex;
 	background-size: cover;
@@ -461,7 +461,7 @@ section{
 	align-items: center;
 }
 .section__all--news:hover {
-	transform: scale(1.3);
+	transform: scale(1.1);
 	transition: 0.2s;
 }
 .section__all--news span{
@@ -1908,8 +1908,21 @@ span.section__projects--title{
 	line-height: 22px;
 	color: #25213C;
 }
+.block__main {
+	position: relative;
+	width: 100%;
+	height: 650px;
+}
 .main-block__text {
 	display: none;
+}
+.main-block__text img  {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
 }
 .main-block__text.active {
 	display: flex;
@@ -2123,6 +2136,9 @@ span.section__projects--title{
 	}
 }
 @media (max-width: 1400px) {
+	.container {
+		max-width: 1200px;
+	}
 	.menu__link{
 		font-size: 12px;
 	}
@@ -2144,7 +2160,27 @@ span.section__projects--title{
 		background-size: 40px 90%;
 	}
 	.section__block-img img {
-		height: 260px;
+		height: 220px;
+	}
+	a.section__block__link img {
+		width: 40px;
+		height: 40px;
+	}
+	.section__block__link {
+		right: 10px;
+		bottom: 10px;
+	}
+	.section__all--news span {
+		font-size: 16px;
+	}
+	.section__all--news img {
+		width: 25px;
+	}
+	.block-main_text {
+		font-size: 16px;
+	}
+	.text-content {
+		font-size: 14px;
 	}
 	.block-date {
 		font-size: 16px;
@@ -2229,6 +2265,18 @@ span.section__projects--title{
 	}
 	.footer__block--link {
 		gap: 50px;
+	}
+	.section__person--content--item {
+		gap: 70px;
+	}
+	.block-tabs span {
+		padding: 18px;
+	}
+	.section__block--content {
+		padding-top: 30px;
+	}
+	.block-main_text {
+		margin-top: 15px;
 	}
 }
 @media (max-width: 1200px) {
@@ -2335,7 +2383,7 @@ span.section__projects--title{
 	.block-main_text {
 		font-size: 16px;
 	}
-	/* .header-bottom__menu li .header-menu__two {
+	.header-bottom__menu li .header-menu__two {
 		position: relative;
 		top: 120%;
 		left: 0;
@@ -2394,7 +2442,11 @@ span.section__projects--title{
 	}
 	.header-menu__two li:not(:last-child) {
 		border: none;
-	} */
+	}
+	.menu__link.select::before {
+		width: 8px;
+		height: 8px;
+	}
 }
 @media (max-width: 992px) {
 	.section__block{
