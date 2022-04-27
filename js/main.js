@@ -124,6 +124,9 @@ menuLink.forEach((elem) => {
 	elem.addEventListener('mouseleave', function () {
 		elem.classList.toggle("active");
 	})
+	elem.addEventListener('click', function () {
+		elem.classList.add("click");
+	});
 });
 
 const mainBlock = document.querySelectorAll('.block__main--items');
