@@ -165,11 +165,19 @@
                                 </div>
                             </div>
                             <div class="section__gallery--img">
-                                <a href="">
+                                <a
+                                data-fancybox="responsive"
+                                data-src="https://lipsum.app/id/5/800x600"
+                                data-srcset="https://lipsum.app/id/5/480x360 480w, https://lipsum.app/id/5/800x600 800w"
+                                data-sizes="(max-width: 600px) 480px, 800px"
+                                >
+                                <img src="https://lipsum.app/id/5/200x150" width="200" height="150" />
+                                </a>
+                                <a data-fancybox="gallery" href="img/gallery-img.png">
                                     <img class="gallery-main" src="img/gallery-img.png" alt="gallery-img">
                                     <div class="gallery-media">
-                                        <img  src="img/gallery-media.png" alt="media">
-                                        <p>25</p>
+                                    <img src="img/gallery-media.png" alt="media">
+                                    <p>25</p>
                                     </div>
                                  </a>
                             </div>
@@ -265,5 +273,9 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- <script src="js/jquery.fancybox.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 </body>
 </html>

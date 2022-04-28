@@ -26,16 +26,15 @@ if (slider) {
 				}, {
 					breakpoint: 768,
 					settings: {
-						arrows: false,
 						slidesToShow: 1,
 						slidesToScroll: 1,
-						dots: true,
 					}
 				}
 			]
 		});
 	});
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
 	document.querySelectorAll('.block-tabs span').forEach(el => {
