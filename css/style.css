@@ -169,6 +169,8 @@ main .container{
 .header-logo__link {
 	width: 459px;
 	height: 124px;
+	display: flex;
+	align-items: center;
 }
 .header-logo__link img {
 	width: 459px;
@@ -337,6 +339,9 @@ main .container{
 .header-menu__two li:hover a {
 	color: #02ADC8;
 }
+.lang_choice:hover {
+	color: #DEBB2A;
+}
 .block__main{
 	/* background: url(../img/main-background0.png); */
 	max-height: 625px;
@@ -401,7 +406,7 @@ main .container{
 	padding: 25px;
 }
 .block__main--items.top::before{
-	content:url(../img/block-line.svg);
+	content:'';
 	position: absolute;
 	top: 0;
 	left: -5px;
@@ -728,7 +733,7 @@ a.section__block__link img {
 	height: 289px;
 }
 .section__person--name{
-	margin-left: 20px;
+	padding: 0 20px;
 	max-width: 312px;
 	width: 100%;
 	font-weight: 600;
@@ -737,7 +742,7 @@ a.section__block__link img {
 	color: #25213C;
 }
 .section__person--text{
-	margin-left: 20px;
+	padding: 0 20px;
 	max-width: 421px;
 	width: 100%;
 	font-weight: 400;
@@ -852,6 +857,13 @@ footer{
 	align-items: center;
 	justify-content: space-between;
 	border-bottom: 1px solid rgba(196, 196, 196, 0.36);
+}
+.footer__logo--link {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
 }
 .footer__block--icons{
 	display: flex;
@@ -1330,11 +1342,12 @@ footer li:hover:after {
 .section__person--content--item{
 	display: flex;
 	gap: 98px;
-	padding: 0 0 20px 20px;
+	padding: 0 0 20px 5px;
+	margin: 0 -5px;
 	overflow: auto;
 }
 .section__person--content--item a{
-	width: 468px;
+	max-width: 468px;
 }
 .section__all--documents--flex img{
 	cursor: pointer;
@@ -2149,7 +2162,46 @@ span.section__projects--title{
 	text-transform: uppercase;
 	color: #ABABAB;
 }
+.pagination__block {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20px;
+}
+.pagination__menu {
+	display: flex;
+}
+.pagination__menu li {
+	width: 50px;
+	height: 50px;
+}
+.pagination__menu li:not(:last-child) {
+	margin-right: 10px;
+}
 
+.pagination__menu li:first-child {
+	margin-right: 30px;
+}
+.pagination__link {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #25213C;
+	border: 1px solid rgba(37, 33, 60, 0.25);
+	box-sizing: border-box;
+	border-radius: 5px;
+	background-color: #FFF;
+}
+.pagination__link.active {
+	border: 1px solid #DEBB2A;
+	color: #FFF;
+	background-color: #DEBB2A;
+}
+.pagination__link img {
+	width: 15px;
+	height: 15px;
+}
 /*-----------------------------------adaptive-----------------------------*/
 @media (max-width: 1720px) {
 	.container {
@@ -2246,6 +2298,9 @@ span.section__projects--title{
 	.section__calendar {
 		padding: 55px 40px 40px 40px;
 	}
+	.section__person {
+		padding: 55px 40px 40px 40px;
+	}
 	.section__about--text {
 		margin-top: 20px;
 		font-size: 16px;
@@ -2260,7 +2315,7 @@ span.section__projects--title{
 		font-size: 16px;
 	}
 	.section__calendar--text--content {
-		padding: 20px 20px 112px 20px;
+		padding: 20px 20px 100px 20px;
 	}
 	.section__calendar--date {
 		font-size: 16px;
@@ -2298,7 +2353,7 @@ span.section__projects--title{
 		height: 15px;
 	}
 	.section__person--content--item a{
-		width: 428px;
+		max-width: 428px;
 	}
 	.section__person--name {
 		font-size: 20px;
@@ -2330,8 +2385,17 @@ span.section__projects--title{
 	.block-main_text {
 		margin-top: 15px;
 	}
+	.block__main {
+		height: 650px;
+	}
+	.section__person--content {
+		margin-top: 60px;
+	}
 }
 @media (max-width: 1200px) {
+	.container {
+		max-width: 1000px;
+	}
 	.burger__menu{
 		display: flex;
 		background: #FFFFFF;
@@ -2363,6 +2427,9 @@ span.section__projects--title{
 		height: 100%;
 		width: 90%;
 		background-color: rgba(0, 0, 0, 0.7);
+	}
+	.header.active .header-top::before {
+		background: none;
 	}
 	.header__bottom.header-bottom .header-bottom__menu.menu{
 		flex-direction: column;
@@ -2425,9 +2492,6 @@ span.section__projects--title{
 		white-space: nowrap;
 
 	}
-	.section__calendar--content{
-		flex-wrap: wrap;
-	}
 	a.section__block__link img {
 		width: 40px;
 		height: 40px;
@@ -2470,7 +2534,7 @@ span.section__projects--title{
 		margin-bottom: 0;
 	}
 	.header-bottom__menu .menu__list {
-		width: 50%;
+		width: 100%;
 	}
 	.header-bottom__menu.header-menu__two li {
 		margin: 0;
@@ -2499,6 +2563,176 @@ span.section__projects--title{
 		width: 8px;
 		height: 8px;
 	}
+	.block__main--items {
+		max-height: 300px;
+	}
+	.block__main--items {
+		padding: 15px 15px 15px 15px;
+	}
+	.block__main--items.top::before {
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.block__main h2 {
+		font-size: 18px;
+	}
+	.block__main {
+		height: 580px;
+	}
+	.main-text {
+		font-size: 16px;
+	}
+	.section__block {
+		padding: 45px 35px 35px 35px;
+	}
+	.section__calendar {
+		padding: 45px 35px 35px 35px;
+	}
+	.section__person {
+		padding: 45px 35px 35px 35px;
+	}
+	.section-about__button {
+		height: 40px;
+		width: 180px;
+	}
+	.section__about--btn {
+		font-size: 14px;
+	}
+	.calendar__main {
+		max-height: 455px;
+		max-width: 50%;
+	}
+	.cal1 {
+		max-width: 470px;
+		margin: 0;
+	}
+	.calendar__main {
+		padding: 10px 30px 10px 30px;
+	}
+	.calendar__main .clndr table tbody tr {
+		width: 390px;
+		height: 42.72px;
+	}
+	.calendar__main .cal1 .clndr .clndr-table tr {
+		height: 42px;
+	}
+	.calendar__main .cal1 .clndr .clndr-controls {
+		margin-bottom: 0;
+	}
+	.cal1 .clndr .clndr-table .header-days .header-day{
+		vertical-align: middle !important;
+	}
+	.cal1 .clndr table tbody tr {
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+	.calendar__main .cal1 .clndr .clndr-table {
+		margin-top: 15px;
+	}
+	.calendar__main .cal1 .clndr .clndr-table .header-days .header-day {
+		font-size: 14px;
+	}
+	.calendar__main .cal1 .clndr .clndr-table tr .day .day-contents {
+		font-size: 14px;
+	}
+	.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button {
+		position: relative;
+		top: 3px;
+	}
+	.section__calendar--text--content {
+		padding: 20px 20px 50px 20px;
+	}
+	.section__calendar--text--content {
+		width: 50%;
+	}
+	.section__calendar--content span {
+		font-size: 16px;
+		margin-top: 10px;
+	}
+	.section__calendar--time {
+		font-size: 16px;
+	}
+	.section__person--items img {
+		height: 250px;
+	}
+	.section__person--content--item {
+		gap: 50px;
+	}
+	.section__person--content {
+		margin-top: 50px;
+	}
+	.section__block--news span {
+		font-size: 16px;
+		padding: 17px;
+	}
+	.tabs-btn {
+		padding: 18px;
+	}
+	.tabs-btn span {
+		font-size: 18px;
+	}
+	.section__calendar--text--middle {
+		padding-top: 15px;
+		margin-top: 15px;
+	}
+	.block-tabs span {
+		font-size: 18px;
+	}
+	footer {
+		padding: 30px 0;
+	}
+	.footer__block {
+		padding-bottom: 30px;
+	}
+	.footer__block--link {
+		gap: 20px;
+	}
+	.footer__block--link--items {
+		font-size: 14px;
+	}
+	.footer__block--icons {
+		gap: 15px;
+	}
+	.footer__block--icons img {
+		width: 15px;
+		height: 15px;
+	}
+	.footer__items--link.map::before {
+		width: 18px;
+		height: 18px;
+	}
+	.footer__items--link.email::before {
+		width: 18px;
+		height: 18px;
+	}
+	.footer__items--link {
+		padding-left: 23px;
+	}
+	.footer__main--content ul li:nth-child(1) {
+		font-size: 16px;
+	}
+	.footer__main--content ul li {
+		font-size: 14px;
+	}
+	.footer__main {
+		padding: 50px 0 30px 0;
+	}
+	.footer__bottom {
+		font-size: 16px;
+	}
+	.footer__bottom a {
+		font-size: 16px;
+	}
+	.section__person--content--item a {
+		max-width: 350px;
+	}
+	.footer__bottom {
+		margin-top: 30px;
+	}
+	.header-top {
+		min-height: 130px;
+	}
 }
 @media (max-width: 992px) {
 	.section__block{
@@ -2516,7 +2750,7 @@ span.section__projects--title{
 		row-gap: 20px;
 	}
 	.block-tabs span{
-		font-size: 12px;
+		font-size: 14px;
 	}
 	.footer__block{
 		flex-wrap: wrap;
@@ -2552,33 +2786,190 @@ span.section__projects--title{
 	.block__chairman--items{
 		width: 100%;
 	}
+	.section__calendar--content {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.calendar__main {
+		max-width: 450px;
+	}
+	.section__calendar--text--content {
+		width: 100%;
+	}
+	.section__about {
+		padding: 45px 30px 30px 30px;
+	}
+	.section__person {
+		padding: 45px 30px 30px 30px;
+	}
+	.section__block--content {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+	.section__block-img img {
+		height: 200px;
+	}
+	a.section__block__link img {
+		width: 35px;
+		height: 35px;
+	}
+	.section__block__link {
+		right: 5px;
+		bottom: 5px;
+	}
+	.block-main_text {
+		font-size: 14px;
+	}
+	.block-date {
+		font-size: 14px;
+	}
+	.text-content {
+		line-height: 18px;
+	}
+	.block__main--items {
+		padding: 10px;
+	}
+	.block__main-title {
+		font-size: 14px;
+	}
+	.main-text {
+		font-size: 14px;
+	}
+	.main-data {
+		font-size: 14px;
+	}
+	.block__main h2 {
+		font-size: 14px;
+	}
+	.section__about--text {
+		font-size: 14px;
+	}
+	.month span {
+		margin: 0;
+	}
+	.calendar__main .cal1 .clndr .clndr-table tr .day .day-contents {
+		font-size: 12px;
+	}
+	.section__calendar--text--content {
+		padding: 15px 15px 30px 15px;
+	}
+	.section__calendar--content span {
+		font-size: 14px;
+	}
+	.section__calendar--time {
+		margin-top: 15px;
+	}
+	.section__person--content--item a {
+		max-width: 387px;
+	}
+	.section__person--items img {
+		height: 200px;
+	}
+	.section__person--name {
+		font-size: 16px;
+	}
+	.section__person--text {
+		font-size: 14px;
+	}
+	.tabs-btn span {
+		font-size: 16px;
+	}
+	.footer__main--content ul:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	.footer__block--logo{
+		width: 100px;
+	}
+	.footer__block--logo img{
+		width: 100%;
+	}
+	.footer__block--link {
+		margin-top: 20px;
+		gap: 38px;
+		flex-wrap: wrap;
+		order: 1;
+	}
+	.footer__block--link--items{
+		font-size: 12px;
+	}
+	.footer__block {
+		justify-content: space-between;
+	}
+	.footer__block--link {
+		width: 100%;
+	}
+	.footer__block--icons {
+		gap: 30px;
+	}
+	.footer__block--logo img {
+		width: 90px;
+		height: 90px;
+	}
+	main .container {
+		margin-top: 40px;
+	}
+	section {
+		margin-top: 40px;
+	}
+	.footer__block--logo {
+		margin-bottom: 20px;
+	}
 }
 @media (max-width: 768px) {
 	.block__main{
 		flex-wrap: wrap-reverse;
-		height: auto;
-		justify-content: end;
+		min-height: 700px;
+		justify-content: flex-end;
 	}
+<<<<<<< HEAD
 	.block__presidium--main a{
 		font-weight: 500;
 
 	}
 	.section__calendar--text--content{
 		width: 100%;
+=======
+	.main-block__text img {
+		object-fit: cover;
+		object-position: center;
+>>>>>>> ddf7be469941d2d86f583df1b92b075dd17e6371
 	}
-	.section__about{
-		padding: 73px 0 0 0 ;
+	.container h1 {
+		font-size: 16px;
 	}
-	.calendar__main{
-		padding: 0;
+	.section__about--text.top {
+		margin-top: 30px;
 	}
-	.cal1 .clndr .clndr-table .header-days{
-		display: flex;
-		justify-content: space-around;
+	.slider .slick-arrow.slick-next {
+		width: 30px;
+		height: 30px;
 	}
-	.clndr table tbody tr{
-		gap: 0 !important;
-		width: auto !important
+	.slider .slick-arrow.slick-prev {
+		width: 30px;
+		height: 30px;
+	}
+	.section__person--tabs {
+		height: 100%;
+	}
+	.header__bottom.active .header-bottom__main {
+		padding: 150px 0 100px 30px;
+	}
+	.header-menu__two li .menu-two__link {
+		font-size: 14px;
+	}
+	.header-bottom__menu .menu__list {
+		padding: 10px 20px;
+	}
+	.block-tabs span {
+		padding: 15px;
+	}
+	.block__main--content {
+		padding-bottom: 0;
+	}
+	.block__main h2 {
+		margin: 0;
+		padding-left: 30px;
+		padding-bottom: 30px;
 	}
 	.section__colleagues--tabs.block-tabs span.active{
 		white-space: normal;

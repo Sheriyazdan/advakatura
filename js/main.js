@@ -26,16 +26,15 @@ if (slider) {
 				}, {
 					breakpoint: 768,
 					settings: {
-						arrows: false,
 						slidesToShow: 1,
 						slidesToScroll: 1,
-						dots: true,
 					}
 				}
 			]
 		});
 	});
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
 	document.querySelectorAll('.block-tabs span').forEach(el => {
@@ -158,3 +157,12 @@ mainBlock.forEach((elem) => {
 	});
 })
 
+
+const paginationLink = document.querySelectorAll('.pagination__link');
+if (paginationLink) {
+	paginationLink.forEach((elem) => {
+		elem.addEventListener('click', function () {
+			elem.classList.toggle('active');
+		});
+	});
+}
