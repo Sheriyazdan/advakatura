@@ -157,3 +157,12 @@ mainBlock.forEach((elem) => {
 	});
 })
 
+
+const paginationLink = document.querySelectorAll('.pagination__link');
+if (paginationLink) {
+	paginationLink.forEach((elem) => {
+		elem.addEventListener('click', function () {
+			elem.classList.toggle('active');
+		});
+	});
+}

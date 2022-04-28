@@ -2121,7 +2121,46 @@ span.section__projects--title{
 	text-transform: uppercase;
 	color: #ABABAB;
 }
+.pagination__block {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20px;
+}
+.pagination__menu {
+	display: flex;
+}
+.pagination__menu li {
+	width: 50px;
+	height: 50px;
+}
+.pagination__menu li:not(:last-child) {
+	margin-right: 10px;
+}
 
+.pagination__menu li:first-child {
+	margin-right: 30px;
+}
+.pagination__link {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #25213C;
+	border: 1px solid rgba(37, 33, 60, 0.25);
+	box-sizing: border-box;
+	border-radius: 5px;
+	background-color: #FFF;
+}
+.pagination__link.active {
+	border: 1px solid #DEBB2A;
+	color: #FFF;
+	background-color: #DEBB2A;
+}
+.pagination__link img {
+	width: 15px;
+	height: 15px;
+}
 /*-----------------------------------adaptive-----------------------------*/
 @media (max-width: 1720px) {
 	.container {
