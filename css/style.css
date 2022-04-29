@@ -2177,7 +2177,6 @@ span.section__projects--title{
 .pagination__menu li:not(:last-child) {
 	margin-right: 10px;
 }
-
 .pagination__menu li:first-child {
 	margin-right: 30px;
 }
@@ -3020,6 +3019,22 @@ span.section__projects--title{
 
 }
 @media (max-width:500px) {
+	.container h1 {
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 20px;
+	}
+	.container {
+		padding: 10px;
+	}
+	.section__about {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	main .container {
+		margin-top: 20px;
+	}
 	.section__calendar--content{
 		margin-top: 25px;
 	}
@@ -3087,17 +3102,16 @@ span.section__projects--title{
 	}
 	.block-tabs{
 		display: flex;
-		gap: 10px;
 	}
 	.block-tabs span{
 		white-space: nowrap;
-		padding: 14px 0;
+		padding: 10px 6px;
+		font-size: 12px;
 	}
 	.block-tabs span.active{
 		background-image: url(../img/background-text.png);
-		background-size: contain;
+		background-size: 32px 90%;
 		background-repeat: no-repeat;
-		background-position: -12px -8px;
 	}
 	.section__block--content,.section__calendar{
 		padding-top: 25px;
@@ -3107,8 +3121,11 @@ span.section__projects--title{
 		padding: 0 20px;
 	}
 	.section__about,.section__calendar{
-		padding-top: 20px;
+		padding: 0;
 		overflow: hidden;
+	}
+	.section-block__row::after {
+		height: 1px;
 	}
 	.section__calendar{
 		padding: 0;
@@ -3134,5 +3151,49 @@ span.section__projects--title{
 	}
 	.footer__main{
 		padding-top: 20px;
+	}
+	.calendar__main {
+		max-height: 555px;
+		max-width: 553px;
+	}
+	.cal1 {
+		max-width: 470px;
+		margin: 0;
+	}
+	.calendar__main {
+		padding: 10px 10px 10px 10px;
+	}
+	.calendar__main .clndr table tbody tr {
+		width: 470px;
+		height: 52.72px;
+	}
+	.calendar__main .cal1 .clndr .clndr-table tr {
+		max-height: 40px;
+		gap: 3px;
+		max-width: 294px;
+		margin-bottom: 12px;
+	}
+	.calendar__main .cal1 .clndr .clndr-controls {
+		margin-bottom: 0;
+	}
+	.cal1 .clndr .clndr-table .header-days .header-day{
+		vertical-align: middle !important;
+	}
+	.cal1 .clndr table tbody tr {
+		margin-top: 0;
+		margin-bottom: 16px;
+	}
+	.calendar__main .cal1 .clndr .clndr-table {
+		margin-top: 20px;
+	}
+	.calendar__main .cal1 .clndr .clndr-table .header-days .header-day {
+		font-size: 14px;
+	}
+	.calendar__main .cal1 .clndr .clndr-table tr .day .day-contents {
+		font-size: 12px;
+	}
+	.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button {
+		position: relative;
+		top: 3px;
 	}
 }
