@@ -10,6 +10,7 @@ if (slider) {
 			initialSlide: 0,
 			autoplay: false,
 			autoplaySpeed: 800,
+			variableWidth: true,
 			responsive: [
 				{
 					breakpoint: 1200,
@@ -158,7 +159,7 @@ mainBlock.forEach((elem) => {
 })
 
 
-const paginationLink = document.querySelectorAll('.pagination__link');
+const paginationLink = document.querySelectorAll('ul.pagination__menu li');
 if (paginationLink) {
 	paginationLink.forEach((elem) => {
 		elem.addEventListener('click', function () {

@@ -1,3 +1,63 @@
-body {
-   background-color: antiquewhite;
+@media (max-width: 1720px) {
+
+}
+@media (max-width: 1400px) {
+
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 500px) {
+   .header__bottom.active .header-bottom__main {
+      padding: 90px 0 100px 0;
+   }
+   .header-bottom__menu .menu__list {
+      padding: 10px 0;
+   }
+   .header__bottom.header-bottom.active {
+      width: 100%;
+   }
+   .container {
+      padding: 20px;
+   }
+   .header-menu__two li .menu-two__link {
+      font-size: 12px;
+   }
+   main .container {
+      padding-bottom: 0;
+   }
+   .section__calendar--text--content {
+      padding: 10px;
+   }
+   .tabs-btn {
+      padding: 10px 6px;
+   }
+   .tabs-btn span {
+      font-size: 12px;
+   }
+   .section__person {
+      padding: 0;
+   }
+   .footer__bottom {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 12px;
+   }
+   .footer__bottom a {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 12px;
+   }
+   .section__block--content {
+      padding: 10px 5px;
+   }
+   .section__calendar--text--content {
+      box-shadow: 0px 4px 21px rgba(92, 104, 148, 0.32);
+   }
 }
